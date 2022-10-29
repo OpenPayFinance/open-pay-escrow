@@ -26,7 +26,7 @@ export const useCountdown = (date: Date) => {
         }
 
         if (hours) {
-            formatted = hours.toString().padStart(2, "0") + 'm ' + formatted
+            formatted = hours.toString().padStart(2, "0") + 'h ' + formatted
         }
 
         if (days) {
