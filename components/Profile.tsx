@@ -4,6 +4,7 @@ import Image from "next/image";
 import { collapseAddress } from "./CopyAbleAddress";
 import { useBalanceQuery } from "../lib/queries";
 import { ethers } from "ethers";
+import ProfileImage from "../images/profile.png"
 
 export const Profile = ({ logOut }: any) => {
 	const { signerAddress, ensAvatar, ensName, symbol } = useContext(EscrowContext);
@@ -13,7 +14,7 @@ export const Profile = ({ logOut }: any) => {
 		<div className="d-flex justify-content-center align-items-center profile-nav">
 			<div className="d-flex float-end profile">
 				<Image
-					src={ensAvatar ?? `https://i.pravatar.cc/75?u=${signerAddress}`}
+					src={ProfileImage}
 					alt={ensName ?? signerAddress}
                     width={75}
                     height={75}
